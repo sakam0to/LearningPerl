@@ -1,0 +1,7 @@
+#! /usr/bin/perl
+# Calculte result of two numbers that user types in
+print "Please type into Multiplicand:";
+chomp($multiplicand=<STDIN>);
+print "Please type into Multiplier:";
+chomp($multiplier=<STDIN>);
+print "The result of $multiplicand x $multiplier is ".$multiplicand*$multiplier."\n";

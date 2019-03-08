@@ -1,0 +1,7 @@
+#! /usr/bin/perl
+# Repeat string user types into with the times user types into too
+print "Please type in a string:";
+chomp($string=<STDIN>);
+print "Please type in repeate times:";
+chomp($times=<STDIN>);
+print $string x $times."\n";
