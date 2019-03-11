@@ -1,0 +1,3 @@
+#! /usr/bin/perl
+print "Please type in string end as Ctrl-D\n";
+print "Reverse:".reverse <STDIN>;

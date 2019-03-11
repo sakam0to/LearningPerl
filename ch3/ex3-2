@@ -1,0 +1,6 @@
+#! /usr/bin/perl
+print "Please type in the SeqNo. of names:fred, betty, barney, dino, wilma, pebbles, bamm-bamm, end as Ctrl-D\n";
+@names = qw /fred betty barney dino wilma pebbles bamm-bamm/;
+foreach (<STDIN>){
+  print @names[$_ - 1]."\n";
+}

@@ -1,0 +1,7 @@
+#! /usr/bin/perl -w
+print "Please type in the strings, end as Ctrl-D\n";
+@output = sort @output = <STDIN>;
+print "Reverse as array:\n";
+print @output;
+chomp(@output);
+print "Reverse as string:@output\n";
