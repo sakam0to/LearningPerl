@@ -5,7 +5,7 @@ use strict;
 
 sub greet{
     state @name;
-    if(!defined @name){
+    if(@name){ # @name在列表上下文中=0，在布尔表达式里就是false
         print "Hi @_! You are the first one here!\n";
     } else{
         print "Hi @_! I have seen @name\n";
