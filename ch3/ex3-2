@@ -1,4 +1,5 @@
 #! /usr/bin/perl
+#读入一组数字，然后按照对应下标输出@names数组里的字符串
 print "Please type in the SeqNo. of names:fred, betty, barney, dino, wilma, pebbles, bamm-bamm, end as Ctrl-D\n";
 @names = qw /fred betty barney dino wilma pebbles bamm-bamm/;
 foreach (<STDIN>){

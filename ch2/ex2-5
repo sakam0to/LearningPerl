@@ -1,4 +1,5 @@
 #! /usr/bin/perl
+#读取一个字符串和一个数字，将字符串复制数字所指定的次数
 # Repeat string user types into with the times user types into too
 print "Please type in a string:";
 chomp($string=<STDIN>);

@@ -1,3 +1,4 @@
 #! /usr/bin/perl
+#读入一组字符串，再按相反顺序输出
 print "Please type in string end as Ctrl-D\n";
 print "Reverse:".reverse <STDIN>;

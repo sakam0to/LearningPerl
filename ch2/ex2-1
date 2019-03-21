@@ -1,4 +1,5 @@
 #! /usr/bin/perl
+#计算半径为12.5的圆周长
 # The circumference of circule with radius 12.5 
 $radius=12.5;
 $pi=3.141592654;

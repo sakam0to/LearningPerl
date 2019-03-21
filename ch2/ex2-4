@@ -1,4 +1,5 @@
 #! /usr/bin/perl
+#读取输入的两个数字，然后计算两者的乘积
 # Calculte result of two numbers that user types in
 print "Please type into Multiplicand:";
 chomp($multiplicand=<STDIN>);
