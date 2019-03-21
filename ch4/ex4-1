@@ -1,0 +1,18 @@
+#! /usr/bin/perl
+#子程序total返回给定列表中数字相加的总和
+use 5.009;
+use strict;
+sub total{
+    my $total;
+    foreach (@_){
+        $total += $_;
+    }
+    return $total;
+}
+
+my @fred = qw {1 3 5 7 9};
+my $fred_total = total(@fred);
+print "The total of \@fred is $fred_total.\n";
+print "Enter some numbers on separate lines: ";
+my $user_total = total(<STDIN>);
+print "The total of those number is $user_total.\n"

@@ -1,0 +1,19 @@
+#! /usr/bin/perl -w
+#子程序greet返回之前传入的所有字符串人名
+use 5.010;
+use strict;
+
+sub greet{
+    state @name;
+    if(!defined @name){
+        print "Hi @_! You are the first one here!\n";
+    } else{
+        print "Hi @_! I have seen @name\n";
+    }
+    push @name, @_;
+}
+
+greet("Fred");
+greet("Barney");
+greet("Wilma");
+greet("Betty");
