@@ -1,0 +1,15 @@
+#! /usr/bin/perl -w
+use strict;
+if(@ARGV == 0){
+die "No way Man\n";
+}
+if(@ARGV == 1){
+die "$0 Cannot run";
+}
+our $success = open FILE, "$ARGV[1]";
+if(! $success){
+die "fail open file $ARGV[2]:$!";
+}
+foreach(<FILE>){
+print "Line:",$_;
+}
