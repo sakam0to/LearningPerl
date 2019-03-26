@@ -1,0 +1,14 @@
+#! /usr/bin/perl
+if(! open NEWFILE, ">new.txt"){
+    die "Open new.txt to write failed:$!";
+}
+print NEWFILE "Write into NEWFILE successfully: ".localtime();
+close NEWFILE;
+
+if(! open OLDFILE, "<new.txt"){
+    die "Open new.txt for reading failed:$!";
+}
+@input = <OLDFILE>;
+print "Read from new.txt:\n";
+print "@input\n";
+close OLDFILE;
