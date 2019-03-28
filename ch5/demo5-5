@@ -1,4 +1,4 @@
 #! /usr/bin/perl
-foreach(@ARGV){
+foreach(<ARGV>){
   print "$_\n";
 }
