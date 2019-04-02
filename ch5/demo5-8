@@ -1,0 +1,5 @@
+#! /usr/bin/perl
+open STDIN, "<&1";
+foreach(<>){
+  print "$_\n";
+}
