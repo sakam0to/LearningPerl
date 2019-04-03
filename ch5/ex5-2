@@ -1,0 +1,5 @@
+#!/usr/bin/perl -w
+#以20字符宽，向右对齐的方式回显用户输入
+@input = <STDIN>;
+print "0123456789" x 6 . "\n"; #标尺行
+printf "%20s" x @input, @input;

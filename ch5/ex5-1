@@ -1,4 +1,5 @@
 #! /usr/bin/perl -w
+#按照相反的顺序输出cat的内容 = tac
 use strict;
 foreach(reverse <ARGV>){
     print $_;
