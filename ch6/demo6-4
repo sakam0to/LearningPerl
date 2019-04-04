@@ -1,0 +1,13 @@
+#!/usr/bin/perl
+%capital_of_country = (
+ China => "Beijing",
+ America => "WashingtonD.C",
+ Britain => "London", 
+ France => "Paris",
+ Japan => "Tokyo",
+ Korea => "Seoul",
+ );
+
+foreach $key (keys %capital_of_country){
+    print "Country:$key Capital:$capital_of_country{$key}\n";
+}
