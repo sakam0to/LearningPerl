@@ -1,0 +1,8 @@
+#!/usr/bin/perl
+@list_of_capitals = qw /"China" "Beijing" "America" "WashingtonD.C" "Britain" "London" "France" "Paris" "Japan" "Tokyo" "Korea" "Seoul"/;
+
+%capital_of_country = @list_of_capitals;
+
+foreach $key (keys %capital_of_country){
+    print "Country:$key Capital:$capital_of_country{$key}\n";
+}
