@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+$capital_of_country{"China"} = "Beijing";
+$capital_of_country{"America"} = "Washington DC";
+$capital_of_country{"Britain"} = "London";
+$capital_of_country{"France"} = "Paris";
+$capital_of_country{"Japan"} = "Tokyo";
+$capital_of_country{"Korea"} = "Seoul";
+
+@list_of_capitals = %capital_of_country;
+print "@list_of_capitals\n";
