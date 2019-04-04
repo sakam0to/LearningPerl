@@ -1,0 +1,17 @@
+#!/usr/bin/perl
+%capital_of_country = (
+ China => "Beijing",
+ America => "WashingtonD.C",
+ Britain => "London", 
+ France => "Paris",
+ Japan => "Tokyo",
+ Korea => "Seoul",
+ );
+
+$index = 0;
+@countries = keys %capital_of_country;
+@capitals = values %capital_of_country;
+while($index < @countries){
+    print "$countries[$index]'s capital is $capitals[$index]\n";
+    $index += 1;
+}
