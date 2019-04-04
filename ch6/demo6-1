@@ -1,0 +1,4 @@
+#!/usr/bin/perl
+$key="hello";
+$hash{$key}="world";
+print "Hello, $hash{$key}!\n";
