@@ -1,0 +1,28 @@
+#!/usr/bin/perl
+$key = "test";
+if(exists $hash{$key}){
+    print "1: key exists: $hash{$key}\n";
+}else{
+    print "1: key doesn't exist.\n";
+}
+
+$hash{$key} = "success";
+if(exists $hash{$key}){
+    print "2: key exists: $hash{$key}\n";
+}else{
+    print "2: key doesn't exist.\n";
+}
+
+$hash{$key} = undef;
+if(exists $hash{$key}){
+    print "3: key exists: $hash{$key}\n";
+}else{
+    print "3: key doesn't exist.\n";
+}
+
+delete $hash{$key};
+if(exists $hash{$key}){
+    print "4: key exists: $hash{$key}\n";
+}else{
+    print "4: key doesn't exist.\n";
+}
