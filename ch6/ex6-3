@@ -1,0 +1,12 @@
+#!/usr/bin/perl -w
+#打印%ENV中的数据
+use strict;
+my $longest = 0;
+foreach my $key (keys %ENV){
+	if(length($key) > $longest){
+		$longest = length($key);
+	}
+}
+foreach my $key (sort keys %ENV){
+	printf "%${longest}s : %s\n", $key, $ENV{$key};
+}	

@@ -1,0 +1,17 @@
+#!/usr/bin/perl -w
+#根据输入的单词(每行一个),统计出现的次数
+use strict;
+my %names;
+print "Please type into the duplicate names:\n";
+while(<STDIN>){
+	chomp;
+	if(exists $names{$_}){
+		$names{$_}++;
+	}else{
+		$names{$_} = 1;
+	}
+}
+
+foreach my $key (sort keys %names){
+	print "$key : $names{$key}\n";
+}	

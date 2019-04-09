@@ -1,0 +1,11 @@
+#!/usr/bin/perl -w
+#读入指定的名字,回报相应的姓
+use strict;
+my %name = (
+    "fred" => "flintstone",
+    "barney" => "rubble",
+    "wilma" => "flintstone",
+);
+print "Please type in the name from <fred, barney, wilma>: ";
+chomp(my $key = <STDIN>);
+print "$name{$key}\n";
