@@ -1,0 +1,13 @@
+#!/usr/bin/perl
+%capital_of_country = (
+ China => "Beijing",
+ America => "WashingtonD.C",
+ Britain => "London", 
+ France => "Paris",
+ Japan => "Tokyo",
+ Korea => "Seoul",
+ );
+
+while(($key, $value) = each %capital_of_country){
+    print "$key\'s capital is $value\n";
+}
