@@ -1,0 +1,4 @@
+#!/usr/bin/perl
+$_ = "a string for regular match";
+$match_result = /regular/;
+print "match result is $match_result\n";
