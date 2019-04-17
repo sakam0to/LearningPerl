@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+$_ = "abcabc";
+print "$_\n";
+if(/abc{2}/){
+    print "abc{2} matched\n";
+}
+
+if(/(abc){2}/){
+    print "(abc){2} matched\n";
+}
