@@ -1,0 +1,5 @@
+#!/usr/bin/perl
+$_ = "123\n321";
+if(/12(\d)[\d\D]\g{1}21/){
+    print "matched\n";
+}
