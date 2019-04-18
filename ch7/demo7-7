@@ -1,0 +1,5 @@
+#!/usr/bin/perl
+$_ = "a23\n32a";
+if(/\w(\d)(\d)[\d\D]\g{2}\g{-2}a/){
+    print "matched\n";
+}

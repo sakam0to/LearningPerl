@@ -1,0 +1,5 @@
+#!/usr/bin/perl
+$_ = "1q2w3e4r /*";
+if(/[1234qwer]+ [\/\*]{2}/){
+    print "matched\n";
+}
