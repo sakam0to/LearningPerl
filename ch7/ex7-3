@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+#从输入中读取，遇到有.就打印
+chomp (@input = <>);
+print "\nmatched:\n";
+for(@input){
+    if(/\./){
+        print "$_\n";
+    }
+}
