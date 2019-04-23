@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+$_ = "http://www.baidu.com";
+if(m {http://}){
+    print "matched m {http://}\n";
+}
+
+if(m /http:\/\//){
+    print "matched m /http:\\/\\//\n";
+ }
+
