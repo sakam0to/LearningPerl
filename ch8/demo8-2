@@ -1,0 +1,15 @@
+#!/usr/bin/perl
+$_ = "ABC DEF GHI";
+print $_."\n";
+if(/abc def ghi/){
+    print "matched:/abc def ghi/\n";
+}
+if(/abc def ghi/i){
+    print "matched:/abc def ghi/i\n";
+}
+if(/abc def ghi/ix){
+    print "matched:/abc def ghi/ix\n";
+}
+if(/abc\sdef\sghi/ix){
+    print "matched:/abc\\sdef\\sghi/ix\n";
+}
