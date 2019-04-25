@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+$_ = "zhangsan1999_ zhang_san_1999";
+print $_."\n";
+if(/\bzhangsan1999_\b/){
+    print "matched \\bzhangsan1999_\\b\n";
+}
+
+if(/\bzhang\B_\Bsan_\B1999\b/){
+    print "matched \\bzhang\\B_\\Bsan_\\B1999\\b\n";
+}
