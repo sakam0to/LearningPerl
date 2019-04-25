@@ -1,0 +1,11 @@
+#!/usr/bin/perl
+$_ = "I'm fred";
+print $_."\n";
+$bettyorfred = "betty|fred";
+if(/^betty|fred/){
+    print "matched ^betty|fred\n";
+}
+if(/^($bettyorfred)/){
+    print "matched ^(betty|fred)\n";
+}
+
