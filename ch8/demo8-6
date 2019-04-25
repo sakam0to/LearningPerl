@@ -2,7 +2,7 @@
 $_ = "I'm fred";
 print $_."\n";
 $bettyorfred = "betty|fred";
-if(/^betty|fred/){
+if(/^$bettyorfred/){
     print "matched ^betty|fred\n";
 }
 if(/^($bettyorfred)/){
