@@ -1,0 +1,5 @@
+#!/usr/bin/perl
+$new_string = "Today is wonderful!";
+if($new_string =~ m{Today is wonderful!}){
+    print "matched!\n";
+}
