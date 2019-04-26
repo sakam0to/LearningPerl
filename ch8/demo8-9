@@ -1,0 +1,8 @@
+#!/usr/bin/perl
+$_ = "This is a test string";
+if(/^(That|This) .* (str)\w*/){
+	print "I only focused $2\n";
+}
+if(/^(?:That|This) .* (str)\w*/){
+	print "I only focused $1\n";
+}
