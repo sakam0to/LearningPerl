@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 $_ = "abc def";
 if(/(c d)/){
-    print "match: $1\n";
+    print "match:$1\n";
 }
 $_ =~ /(a_b)/;
 print "match:$1\n";
