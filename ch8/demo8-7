@@ -1,0 +1,5 @@
+#!/usr/bin/perl
+$_ = "Fred fred";
+if(/([a-zA-Z])(red) f\2/){
+    print "$1red matched\n";
+}
