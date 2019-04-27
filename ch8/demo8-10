@@ -1,0 +1,5 @@
+#!/usr/bin/perl
+$_ = "This is a test";
+if(/(This|That) (?<be>is|was) (?<one>a|an) (test)/){
+	print "This $+{be} $+{one} test\n";
+}
