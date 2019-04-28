@@ -1,0 +1,5 @@
+#!/usr/bin/perl
+$_ = "gred's name is gred";
+if(/^(?<gname>gred)'s name is \g{gname}$/){
+    print "matched!\n";
+}
