@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+if("1Monday 2Tuesday 3Wednesday 2TuesDay 4Thursday" =~ /Tuesday/){
+    print "1Monday 2Tuesday 3Wednesday 2TuesDay 4Thursday\n";
+    print "\$`=$`\n";
+    print "\$&=$&\n";
+    print "\$'=$'\n";
+}
