@@ -1,0 +1,8 @@
+#!/usr/bin/perl
+while(<>){
+    chomp;
+    if(/\s$/){
+        print "'$_' ends with blank\n";
+    }
+}
+
