@@ -1,0 +1,4 @@
+#!/usr/bin/perl
+$_="This is a test.\n";
+s/(is) \1/were/;
+print $_;

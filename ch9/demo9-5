@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+$_="This is a test.\n";
+s/(?<be>is)/_$+{be}_/;
+print $`."\n";
+print $&."\n";
+print $'."\n";
+print $_;

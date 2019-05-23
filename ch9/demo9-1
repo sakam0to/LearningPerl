@@ -1,4 +1,6 @@
 #!/usr/bin/perl
 $_="This is a test.\n";
-s/is/was/;
-print $_;
+if($result = s/is/was/){ 
+	print $_;
+}
+print "result:$result\n";
