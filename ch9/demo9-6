@@ -1,0 +1,5 @@
+#!/usr/bin/perl
+$_="This is a test.\n";
+print $_;
+s/(?<be>test)/\u\L$+{be}/;
+print $_;
