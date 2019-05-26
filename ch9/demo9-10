@@ -1,0 +1,5 @@
+#!/usr/bin/perl
+$_ = " Zhao Qian Sun LI Zhou Wu Zheng Wang ";
+foreach (split){
+  print $_."\n";
+}
