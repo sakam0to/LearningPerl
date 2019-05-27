@@ -1,0 +1,6 @@
+#!/usr/bin/perl
+$_ = "Zhang san   Li si  Wang wu  ";
+@pieces = /([A-Z][a-z]+)\s+(\w+)/g;
+foreach (@pieces){
+  print $_."\n";
+}
