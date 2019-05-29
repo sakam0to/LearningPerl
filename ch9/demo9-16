@@ -1,0 +1,8 @@
+#!/usr/bin/perl
+$_ = "TAG a b c d ef ghi jk TAG lmn opq TAG rst uvw xyz TAG";
+if(m/TAG (.+) TAG/){
+     print "Greedy:".$&."\n";
+}
+if(m/TAG (.+?) TAG/){
+     print "Non-greedy:".$&."\n";
+}
