@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w 
 use strict;
 $^I=".bak";
-my $date = `date`;
+chomp(my $date = `date`);
 while(<>){
     s/Date:.*/Date:$date/;
     print;
