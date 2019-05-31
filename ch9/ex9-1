@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+#匹配模式$what连续重复三次的字符串
+$_ = <STDIN>;
+$what = "fred|barney";
+if(/($what){3}/){
+    print "Matched!\n";
+}

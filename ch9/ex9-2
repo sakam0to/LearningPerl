@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+#将源文件的fred替换成larry（不分大小写），并输出到以.out为后缀的新文件中，源文件名在命令行中指定
+if(!defined $ARGV[0]){
+    die "Usage: $0 filename";
+}
+
+$in = $ARGV[0];
+$out = $in.".out";
+
+if(!open IN, "<$in"){
+    die "Open $in failed: $!";
+}
+
+if(!open OUT, ">$out"){
+    die "Open $out failed: $!";
+}
+
+while(<IN>){
+    s/fred/Larry/ig;
+    print OUT $_;
+}
