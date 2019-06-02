@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+chomp (my $input = <STDIN>);
+if ($input < 0){
+  print "negative\n";
+} elsif ($input > 0){
+  print "positive\n";
+} else{
+  print "zero\n";
+}
