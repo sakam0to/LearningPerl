@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+#写一个程序给代码文件加上版权声明，版权声明应在第一行之后，并做好备份，文件名通过命令行指定
+$^I=".bak";
+while(<>){
+   if(/^#!/){
+	$_ .= "#Copyright (C) 2019 by sakam0to Truly\n";
+   }
+   print;
+}
