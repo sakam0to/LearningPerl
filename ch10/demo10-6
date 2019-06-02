@@ -1,9 +1,10 @@
 #!/usr/bin/perl
-$n = 1;
-while(1){
-    if($n > 100){
+#打印出所有提到fred的行，直到碰到__END__记号为止
+while(<STDIN>){
+    if(/__END__/){
         last;
+    } elsif (/fred/i){
+        print;
     }
-    $n++;
 }
-print $n."\n";
+## last指令会跳到这里  
