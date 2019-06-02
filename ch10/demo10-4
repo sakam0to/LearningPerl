@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+$n = 10;
+print $n."\n";
+print $n++."\n";
+print $n."\n";
+print ++$n."\n";
+print $n."\n";
