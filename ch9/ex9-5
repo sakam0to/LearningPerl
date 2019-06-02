@@ -1,0 +1,24 @@
+#!/usr/bin/perl
+#修改ex9-4，写一个程序给代码文件加上版权声明，版权声明应在第一行之后，并做好备份，文件名通过命令行指定，但如果一个文件已经有了版权声明就不再添加
+#第一步：遍历@ARGV，将文件名放入一个哈希中
+my %filename_hash;
+foreach(@ARGV){
+	$filename_hash{$_} = 1;
+}
+
+#第二步：用钻石操作符遍历@ARGV，将已经有注释的文件从哈希中移除
+while(<>){
+	if(/^#Copyright/){
+		delete $filename_hash{$ARGV};
+	}
+}
+
+#第三步：用哈希替换@ARGV,再次用钻石操作符遍历，这次只需要添加注释
+@ARGV = sort keys %filename_hash;
+$^I=".bak";
+while(<>){
+   if(/^#!/){
+	$_ .= "#Copyright (C) 2019 by sakam0to Truly\n";
+   }
+   print;
+}
