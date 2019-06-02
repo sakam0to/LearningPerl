@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+for(@ARGV) {
+      print $_."\n";
+}
+for(1 ... 10){
+    print $_."\n";
+}
