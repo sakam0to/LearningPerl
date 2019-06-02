@@ -1,0 +1,34 @@
+#!/usr/bin/perl
+$_ = "apple";
+
+print "It is $_\n";
+if(/apple/){
+  print "If this is an apple, then print it\n";
+  $_ = "banana";
+}else {
+  print "If this isn't an apple, then print it\n";
+  $_ = "apple";
+}
+
+print "It is $_\n";
+unless(/apple/){
+   print "Print it unless it is an apple\n";
+   $_ = "apple";
+}else {
+   print "Print it unless it isn't an apple\n";
+   $_ = "banana";
+}
+
+print "It is $_\n";
+while(/apple/){
+    print "while it is an $_, repeat\n";
+    $_ = "banana";
+}
+
+print "It is $_\n";
+until(/apple/){
+    print "Repeat $_ until it is an apple\n";
+    $_ = "apple";
+}
+
+print "It is $_\n";

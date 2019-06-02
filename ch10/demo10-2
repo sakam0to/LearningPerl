@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+my $n = 10;
+{
+	my $n += 1;
+	print $n."\n";
+}
+print $n."\n";
