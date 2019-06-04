@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+print "Please type in the width:";
+chomp($width = <STDIN>);
+print "\n";
+
+my $size = 
+	($width < 10) ? "small" :
+	($width < 20) ? "medium" :
+	($width < 50) ? "large":
+			"extra-large"; # default
+print "The size is $size\n";
+	
