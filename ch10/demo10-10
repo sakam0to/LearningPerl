@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+LINE: while(<>){
+	print "[LINE]$_";
+WORD:  foreach(split){
+                  last LINE if /end/i;
+                  next WORD if /\W+/;
+                  print "[WORD]$_\n";
+              }
+}
