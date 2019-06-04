@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+print "Please type in \$a:";
+chomp($a = <STDIN>);
+print "\nPlease type in \$b:";
+chomp($b = <STDIN>);
+print "\n";
+($a == $b)||(print "\$a:$a != \$b:$b\n");
