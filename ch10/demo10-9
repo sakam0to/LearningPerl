@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+foreach(1...10) {
+    print "Iteration Number $_.\n\n";
+    print "Please choose: last, next, redo or none of the above? ";
+    chomp($choice = <STDIN>);
+    print "\n";
+    last if $choice =~ /^last$/;
+    next if $choice =~ /^next$/;
+    redo if $choice =~ /^redo$/;
+    print "That wasn't any of the choices... onward!\n\n";
+}
+print "That's all, folks.\n\n";

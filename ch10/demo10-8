@@ -1,0 +1,16 @@
+#!/usr/bin/perl
+#打字测试
+my @words = qw{ Fred barney pebbles dino wilma betty};
+my $error = 0;
+
+foreach(@words){
+    ## redo指令会跳到这里
+    print "Type the word `$_`: ";
+    chomp (my $try = <STDIN>);
+    if($try ne $_){
+        print "Sorry - That's not right.\n\n";
+        $error++;
+        redo;  # 跳到循环开始的位置
+   }
+}
+print "You have completed the test, with $error errors.\n";
