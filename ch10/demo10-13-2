@@ -1,0 +1,5 @@
+#!/usr/bin/perl
+$someone = "Fred";
+$last_name{$someone} = "";
+my $last_name = $last_name{$someone} // 'no last name';
+print "$last_name\n";
