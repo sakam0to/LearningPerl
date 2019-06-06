@@ -1,5 +1,8 @@
 #!/usr/bin/perl
 use File::Spec;
+if(@ARGV != 2){
+	die "Usage:./demo11-3 <old_filename> <new_filename>";
+}
 chomp($dir = `pwd`);
 $old_name = File::Spec->catfile($dir,$ARGV[0]);
 $new_name = File::Spec->catfile($dir,$ARGV[1]);
