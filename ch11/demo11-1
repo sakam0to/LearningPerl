@@ -1,0 +1,6 @@
+#!/usr/bin/perl
+use File::Basename
+chomp($fullname = `pwd`);
+$dirname = dirname $fullname;
+$basename = basename $fullname;
+print "Current directory:$dirname Filename:$basename\n";
