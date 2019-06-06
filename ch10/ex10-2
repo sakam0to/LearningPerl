@@ -1,0 +1,20 @@
+#!/usr/bin/perl
+$Debug = $ENV{DEBUG}//1;
+$rand = int (1 + rand 100);
+print $rand."\n" if $Debug;
+while(1){
+	chomp(my $input = <STDIN>);
+	if(!($input =~ /^[0-9]+$/)){
+		last;
+	}
+	if($input < $rand){
+		print "Too low\n";
+	}elsif($input > $rand){
+		print "Too high\n";
+	}else{
+		print "Match\n";
+		last;
+	}	
+}
+
+
