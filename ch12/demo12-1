@@ -1,0 +1,16 @@
+#!/usr/bin/perl
+#测试文件是否存在，并且是否在今天修改过
+print "Please type in filename: ";
+chomp($filename = <STDIN>);
+if(-e $filename){
+	print "A file called '$filename' already exists.\n";
+	open DEMOFILE, $filename;
+	if(-M DEMOFILE >= 1){
+		print "The file $filename modified before today\n"
+	}else{
+		print "The file $filename modified today\n";
+	}
+	
+}else{
+	die "Oops! A file called '$filename' doesn't exist.\n";
+}
