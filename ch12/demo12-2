@@ -1,0 +1,6 @@
+#!/usr/bin/perl
+#证明$^T变量在程序启动后不再改变
+print $^T."\n";
+print "Press <ENTER> to continue...: ";
+$input = <STDIN>;
+print "\n$^T\n";
