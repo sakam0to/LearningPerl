@@ -1,0 +1,6 @@
+#!/usr/bin/perl
+print "please type in filename: ";
+chomp($filename = <STDIN>);
+my ($dev, $ino, $mode, $nlink, $uid, $gid, $rdev, $size, $atime, $mtime, $ctime, $blksize, $blocks) = stat $filename;
+print "dev:$dev\nino:$ino\nmode:$mode\nnlink:$nlink\nuid:$uid\ngid:$gid\nsize:$size\natime:$atime\nmtime:$mtime\nctime:$ctime\n";
+

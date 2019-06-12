@@ -1,0 +1,20 @@
+#!/usr/bin/perl
+foreach my $filename (@ARGV){
+	my $result = &attributes($filename);
+	print "File '$filename' $result\n";
+}
+
+sub attributes{
+	$filename = shift @_;
+	return "doesn't exist." unless -e $filename;
+
+	my @attribute;
+	push @attribute, "readable" if -r _;
+	push @attribute, "writable" if -w _;
+	push @attribute, "executable" if -x _;
+	return "just exists." unless @attribute;
+	$_ = "is ". join " and ", @attribute;
+	return $_ if @attribute <= 2;
+	s/ and /, /;
+	return $_;
+}

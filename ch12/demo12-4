@@ -1,0 +1,4 @@
+#!/usr/bin/perl
+print "Current Time:".localtime $^T."\n";
+my ($sec, $min, $hour, $day, $mon, $year, $wday, $yday, $isdat) = localtime $^T;
+print "sec:$sec\nmin:$min\nhour:$hour\nday:$day\nmon:$mon\nyear:$year\nwday:$wday\nyday:$yday\nisdat:$isdat\n";
