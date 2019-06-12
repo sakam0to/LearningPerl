@@ -1,0 +1,13 @@
+#!/usr/bin/perl
+#使用栈式操作符，判断命令行所列出的文件所有者是否为执行程序的用户，是否可读/可写
+for my $each_file (@ARGV){
+	if(-w -r -o $each_file){
+		print "File '$each_file' is owned by myself which is readable and writable\n";
+	} else{
+		print "File '$each_file' is";
+		print " not owned by myself" unless -o _;
+		print " not readable" unless -r _;
+		print " not writable" unless -w _;
+		print "\n";
+	}
+}

@@ -1,0 +1,14 @@
+#!/usr/bin/perl
+#根据命令行输入的文件名，返回最旧的文件
+die "Usage: ex12-2 <filename1> <filename2> ..." unless @ARGV;
+my $oldest_file = shift @ARGV;
+my $oldest_age = -M @oldest_file;
+
+for $each_file (@ARGV){
+	my $age = -M $each_file;
+	($oldest_file, $oldest_age) = ($each_file, $age) if $age > $oldest_age #列表赋值
+}
+
+
+printf "The oldest file is %s which is modified before %.0f day(s) %.0f hour(s).\n", $oldest_file, $oldest_age, ($oldest_age * 100 % 100 / 100) * 24;
+

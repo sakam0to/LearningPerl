@@ -1,4 +1,5 @@
 #!/usr/bin/perl
+#根据命令行的文件名，返回文件是否存在/可读/可写/可执行
 foreach my $filename (@ARGV){
 	my $result = &attributes($filename);
 	print "File '$filename' $result\n";
