@@ -1,0 +1,4 @@
+#!/usr/bin/perl
+print "Where you want to go? ";
+chomp(my $path = <STDIN>);
+chdir $path or die "Cannot change dir to $path: $!";
