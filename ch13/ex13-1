@@ -1,0 +1,14 @@
+#!/usr/bin/perl
+#用户输入目录，然后跳转并列印目录下的文件列表，如果输入空行则跳转到用户主目录
+print "Please type in where you want to go(empty for home directiory): ";
+chomp(my $dir = <STDIN>);
+if($dir =~ /^\s*$/){
+	chdir or die "Cannot change to your home directory: $!\n";
+}else{
+	chdir $dir or die "Cannot change to directory '$dir': $!\n";
+}
+
+@file_list = glob "* .*";
+foreach(@file_list){
+	print "$_\n";
+}
