@@ -1,0 +1,8 @@
+#!/usr/bin/perl
+print "Please type in new directory: ";
+chomp(my $new_dir = <STDIN>);
+print "Please type in permission(as octal):";
+chomp(my $perm = <STDIN>);
+
+mkdir $new_dir, oct($perm) or die "Create new directory '$new_dir' with permission ACL '$perm' failed: $!\n";
+print "Success.\n";
