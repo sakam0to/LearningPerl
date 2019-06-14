@@ -1,0 +1,5 @@
+#!/usr/bin/perl
+my $access_now = time; ## time函数返回当前时间戳
+my $modified_yesterday = $access_now - 24 * 60 * 60;
+$result = utime $access_now, $modified_yesterday, glob "demo13-*";
+print "success modified $result file(s)\n";
