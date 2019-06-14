@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+print "Please type in directory: ";
+chomp (my $directory = <STDIN>);
+opendir DIR, $directory or die "Failed to open dir '$directory': $!\n";
+foreach $filename (readdir DIR){
+	  print "$filename\n";
+}
+close DIR;
+
