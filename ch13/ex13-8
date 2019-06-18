@@ -1,0 +1,6 @@
+#!/usr/bin/perl
+#读取当前目录下所有符号链接的内容并打印
+foreach(glob "* .*"){
+    $link_file = readlink $_;
+    print "$_ -> $link_file\n" if defined $link_file;
+}

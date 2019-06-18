@@ -1,0 +1,24 @@
+#!/usr/bin/perl
+#实现ln -s命令的功能，创建一个指向原文件的软链接，原文件由第二个参数指定，第三个参数为硬链接的名字
+use File::Basename;
+use File::Spec;
+
+my $symlink = $ARGV[0] eq '-s';
+shift @ARGV, @ARGV if $symlink;
+
+if(@ARGV != 2){
+	die "Usage: ex13-7 [-s] <source_file> <link_file>: $!\n";
+}
+
+my ($source, $link) = @ARGV;
+
+if(-d $dest){
+    my $basename = basename $source;
+    $link = File::Spec::catfile($link, $basename);
+}
+
+if($symlink){
+    symlink $source, $link or die "create link file failed: $!\n";
+}else{
+    link $source, $link or die "create link file failed: $!\n";
+}
