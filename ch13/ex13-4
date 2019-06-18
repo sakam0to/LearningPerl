@@ -1,0 +1,5 @@
+#!/usr/bin/perl
+#模仿rm命令，删除命令行参数指定的文件
+foreach(@ARGV){
+	unlink $_ or warn "Cannot delete file '$_': $!\n";
+}

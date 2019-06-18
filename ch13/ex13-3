@@ -1,0 +1,17 @@
+#!/usr/bin/perl
+#用户输入目录，然后跳转并列印目录下的文件列表,包含以点号开头的文件，如果输入空行则跳转到用户主目录
+#使用目录句柄
+print "Please type in where you want to go(empty for home directiory): ";
+chomp(my $dir = <STDIN>);
+my @file_list;
+if($dir =~ /^\s*$/){
+	opendir HOME, "." or die "Cannot open current directory: $!\n";
+	@file_list = readdir HOME;
+}else{
+	opendir DIR, $dir or die "Cannot open directory '$dir': $!\n";
+	@file_list = readdir DIR;
+}
+
+foreach(@file_list){
+	print "$_\n";
+}
