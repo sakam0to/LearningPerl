@@ -1,0 +1,11 @@
+#!/usr/bin/perl
+#实现ln命令的功能，创建一个指向原文件的硬链接，原文件由第一个参数指定，第二个参数为硬链接的名字
+if(@ARGV != 2){
+	die "Usage: ex13-6 <source_file> <link_file>: $!\n";
+}
+
+my ($source, $link) = @ARGV;
+
+die "link file '$link' exists\n" if -e $dest;
+
+link $source, $link or die "create link file failed: $!\n";
