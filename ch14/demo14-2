@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+$string = "abc def def ghi";
+print $string."\nPlease type in the matching substring: ";
+chomp($substring = <STDIN>);
+printf "I found '%s' in '%s' at '%d' from left to right and '%d' from right to left.\n",
+	$substring,
+    	$string,
+    	index ($string, $substring),
+  	rindex ($string, $substring);
