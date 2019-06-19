@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+$hello_string = "Hello world";
+$pos = index ($hello_string, "l");
+while($pos >= 0){
+	print "I found 'l' in '$hello_string' at '$pos'.\n";
+	$pos = index ($hello_string, "l", $pos + 1);
+}
