@@ -1,0 +1,6 @@
+#!/usr/bin/perl
+$string = "Thomas Jefferson";
+$substring  = substr ($string, 6);
+print $substring."\n";
+$substring = substr($string, 5, 3);
+print $substring."\n";
