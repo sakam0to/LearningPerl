@@ -1,0 +1,4 @@
+#!/usr/bin/perl
+$name = "Thomas Jefferson";
+$last_name = substr ($name, index($name, " ") + 1);
+print $last_name."\n";
