@@ -1,0 +1,6 @@
+#!/usr/bin/perl
+$string = "Name: Max Gender:Male";
+print "The original string: '$string'"."\n";
+substr($string, 0, index($string, "Gender")) = "Name: Caroline ";
+substr($string, index ($string, "Gender")) =~ s/Male/Female/;
+print "Modified String: '".$string."'\n";
