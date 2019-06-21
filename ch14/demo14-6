@@ -1,0 +1,5 @@
+#!/usr/bin/perl
+$string = "Air China CA987 Beijing to Los Angeles";
+$return_string = substr($string, 10, 5, "CA887");
+print "The function substr return: '$return_string'\n";
+print "The original string: '$string'\n";
