@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+$year = 2019;
+$month = 6;
+$day = 22;
+$hour = 5;
+$minute = 25;
+$second = 0;
+$result = sprintf "%4d/%02d/%02d %2d:%2d:%2d", $year, $month, $day, $hour, $minute, $second;
+print $result."\n";
