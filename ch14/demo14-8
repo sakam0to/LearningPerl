@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+sub big_money{
+  $number = sprintf "%.2f", shift @_;  #对数据进行第一部处理:精确到小数点后两位
+  1 while $number =~ s/(-?\d+)(\d\d\d)/$1,$2/;  #添加逗号
+  $number =~ s/^(-?)/$1\$/;  #在开始位置添加美元$符号
+  $number;   #返回
+}
+
+print "Please type in the number:";
+chomp(my $input = <STDIN>);
+my $result = &big_money($input);
+print "The result is: $result\n";
