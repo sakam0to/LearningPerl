@@ -1,0 +1,16 @@
+#!/usr/bin/perl
+my %score = ("barney" => 195,
+		"fred" => 205,
+		"dino" => 30
+	);
+
+
+sub by_score{
+	$score{$b} <=> $score{$a};
+}
+@result = sort by_score (keys %score);
+print "The sorting result is\n";
+foreach (@result){
+	print " $_ => $score{$_}\n";
+}
+
