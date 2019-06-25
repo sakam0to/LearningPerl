@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+@name = qw /1 Jason Max Woody Penn/;
+$flag = "Jason";
+$result = 0;
+for(@name){
+	next if $_ cmp $flag;
+	$result = 1;
+	print "here: $_\n";
+	last;
+}
+
+print "[@name]\n" if (@name ~~ $flag);

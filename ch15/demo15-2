@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+$reserver_user = "root";
+given ( $ARGV[0] ){
+  when( /fred/i ) { say 'Name has fred in it' }
+  when( /^Fred/) { say 'Name starts  with Fred' }
+  when( @ARGV != 1 ){ warn "Usage: ex15-2 <YOUR_NAME>"; continue}
+  when( $reserver_user eq $ARGV[0]) {say "You cannot use reserverd name\n"; continue }
+  when( 'Fred' ) { say 'Name is Fred' }
+  default { say "I don't see a Fred" }
+}
