@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+#使用for-when结构，从命令行读取一个文件列表，然后判断他们的可读可写和可执行权限
+use 5.010;
+for (@ARGV){
+	when (! -e){ print "File '$_' doesn't exist.\n"}
+	when (-r _) {print "File '$_' is readable\n"; continue}
+	when (-w _) {print "File '$_' is writable\n"; continue}
+	when (-x _) {print "File '$_' is executable\n"; continue}
+}

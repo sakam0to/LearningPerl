@@ -1,0 +1,22 @@
+#!/usr/bin/perl
+#从命令行得到一个数字，返回除1和它本身之外所有的因数，并判断其是否为质数
+sub divisions {
+	my $number = shift;
+	my @divisors = ();
+	foreach my $divisor ( 2 .. ($number / 2)){
+		push @divisors , $divisor unless $number % $divisor;
+	}
+	return @divisors;
+}
+use 5.010;
+if(@ARGV != 1){
+	die "Usage1: ex15-4 <Number>\n";	
+}
+
+given($ARGV[0]){
+	when (! /^\d+$/){ die "Usage2: ex15-4 <Number>\n"}
+	my @divisors = &divisions($_);
+	my @empty;
+	when (@divisors ~~ @empty){ print "'$_' is prime number\n"}
+	default {print "The divisors of '$_' are: [@divisors]\n"}
+}

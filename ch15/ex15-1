@@ -1,0 +1,26 @@
+#!/usr/bin/perl
+#修改ex10-1，用given-when结构实现
+use 5.010;
+$rand = int (1 + rand 100);
+#print $rand."\n";
+while(1) {
+	chomp(my $input = <STDIN>);
+	given($input){
+		when(!($input =~ /^[0-9]+$/)){
+			print "You type wrong number\n";
+			last
+		}
+		when($input < $rand){
+			print "Too low\n"
+		}
+		when($input > $rand){
+			print "Too high\n"
+		}
+		default {
+			print "Match\n"
+		
+		}
+	}	
+}
+
+

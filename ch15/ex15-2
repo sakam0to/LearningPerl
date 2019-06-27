@@ -1,0 +1,21 @@
+#!/usr/bin/perl -w
+#设计一个程序，根据输入的数字，被3整除输出Fizz，被5整除输出Bin，被7整除输出Sausage
+use 5.010;
+print "Please type in a number: ";
+chomp ( $input = <STDIN>);
+$what = "";
+given ($input){
+	when($input % 3 == 0) { 
+		$what .= " Fizz ";
+		continue
+	}
+	when ($input % 5 == 0) {
+		$what .= " Bin ";
+		continue
+	}
+	when ($input % 7 == 0 ) {
+		$what .= " Sausage "
+	}
+}
+print $what."\n" if $what;
+
