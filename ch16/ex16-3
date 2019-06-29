@@ -1,0 +1,8 @@
+#!/usr/bin/perl
+#根据date的返回结果输出go to work或者go play
+my $now = `date`;
+if($now =~ /^(Sat|Sun)/){
+	print "go play\n";
+}else {
+	print "go to work\n";
+}

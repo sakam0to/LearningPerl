@@ -1,0 +1,6 @@
+#!/usr/bin/perl
+#修改ex16-1，把结果输出到ls.out文件，错误输出到ls.err文件
+open STDOUT, ">ls.out" or die "Cannot write to ls.out: $!\n";
+open STDERR, ">ls.err" or die "Cannot write to ls.err: $!\n";
+chdir "/" or die "Cannot change directory to /: $!\n";
+exec "ls -l" or die "Cannot execute 'ls -l': $!\n";

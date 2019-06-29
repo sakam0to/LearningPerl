@@ -1,0 +1,5 @@
+#!/usr/bin/perl
+foreach (`who`){
+  my($user, $tty, $data) = /(\S+)\s+(\S+)\s+(.*)/;
+  print "$user: $tty at $date\n";
+}

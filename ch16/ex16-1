@@ -1,0 +1,4 @@
+#!/usr/bin/perl
+#进入系统根目录然后执行ls -l
+chdir "/" or die "Cannot change directory to /: $!\n";
+exec "ls -l" or die "Cannot execute 'ls -l': $!\n";

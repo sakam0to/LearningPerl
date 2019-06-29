@@ -1,0 +1,3 @@
+#!/usr/bin/perl
+chomp (my $no_newline_now = `date`);
+print "The time is now $no_newline_now \n";

@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+sub signal_handler{
+  print "I'm signal handler and I received the interrupt signal.\n";
+  die "Interrupt executed by signal_handler.";
+}
+$SIG{"INT"} = "signal_handler";
+while (1) {};

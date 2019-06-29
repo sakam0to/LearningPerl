@@ -1,0 +1,3 @@
+#!/usr/bin/perl
+my $now = `date`;
+print "The time is now $now"; #date的返回包括了换行符

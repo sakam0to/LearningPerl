@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+my @functions = qw { int rand sleep length hex eof not exit sqrt umask};
+my %about;
+
+foreach (@functions) {
+   $about{$_} = `perldoc -t -f $_`;
+}
+foreach (sort keys %about){
+  print "$_ : $about{$_}\n";
+}
