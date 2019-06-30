@@ -4,19 +4,19 @@ my $file_name = "sample_text";
 open FILE, $file_name or die "Can't open file '$file_name': $!"; #打开文件
 chomp (my @strings = <FILE>);#读取文件
 while (1) {
-	prinr "Please enter a pattern:";
+	print "Please enter a pattern:";
 	chomp (my $pattern = <STDIN>);
 	last if $pattern =~ /^\s*$/;
-	my @matches = eval {
-		grep {/$pattern/} @strings;
-	}
-	if($@) {
-		print "Error: $@";
+	my @matches = eval {  # 在eval代码块中捕获错误
+		grep {/$pattern/} @strings;  #利用正则遍历查找符合规则的行
+	};
+	if($@){
+		print "Error: $@"; # 如果eval捕获错误$@就不为空
 	}else{	
 		my $count = @matches;
-		print "There are $count matched strings:\n", map ("$_\n"),@matches;
-		
+		print "There are $count matched strings:\n", map ("$_\n"),@matches; # 给捕获的每一行加换行符
 	}
+	print "\n";
 }
 	
 
