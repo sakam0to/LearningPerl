@@ -1,0 +1,23 @@
+#!/usr/bin/perl
+#读取sample_textd文件，然后让用户输入模式，返回匹配结果，当模式为空白时结束
+my $file_name = "sample_text";
+open FILE, $file_name or die "Can't open file '$file_name': $!"; #打开文件
+chomp (my @strings = <FILE>);#读取文件
+while (1) {
+	prinr "Please enter a pattern:";
+	chomp (my $pattern = <STDIN>);
+	last if $pattern =~ /^\s*$/;
+	my @matches = eval {
+		grep {/$pattern/} @strings;
+	}
+	if($@) {
+		print "Error: $@";
+	}else{	
+		my $count = @matches;
+		print "There are $count matched strings:\n", map ("$_\n"),@matches;
+		
+	}
+}
+	
+
+
